@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Tormenta Solar | Un Relato corto de ciencia ficción de Pere Chardi Garcia</title>
+
+		<meta name="description" content="Gabriel Salas lucha por mantener la cordura en un mundo desolado por una tormenta solar. Un relato corto de ciencia ficción sobre la soledad y la memoria.">
+		<meta name="author" content="Pere Chardi Garcia">
+		<meta name="keywords" content="tormenta solar, relato, ciencia ficción, relato corto, Pere Chardi Garcia, post-apocalíptico, soledad, distopía, Gabriel Salas">
+		<link rel="canonical" href="https://perech72.github.io/tormentaSolar">
+		<meta property="og:title" content="Tormenta Solar | Un Relato de Pere Chardi Garcia">
+		<meta property="og:description" content="Gabriel Salas lucha por mantener la cordura en un mundo desolado por una tormenta solar. Un relato corto de ciencia ficción sobre la soledad y la memoria.">
+		<meta property="og:type" content="article">
+		<meta property="og:url" content="https://perech72.github.io/tormentaSolar">
+		<meta property="og:image" content="https://perech72.github.io/tormentaSolar/portada.jpg">
+		<meta property="og:locale" content="es_ES">
+		<meta property="og:site_name" content="Relatos de Pere Chardi Garcia">
+		<meta property="article:author" content="Pere Chardi Garcia">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Tormenta Solar | Un Relato de Pere Chardi Garcia">
+		<meta name="twitter:description" content="Gabriel Salas lucha por mantener la cordura en un mundo desolado por una tormenta solar. Un relato corto de ciencia ficción sobre la soledad y la memoria.">
+		<meta name="twitter:image" content="https://perech72.github.io/tormentaSolar/portada.jpg">
+		
+		    <style>
+        /* Importar fuentes modernas de Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&family=Merriweather:ital,wght@0,400;0,700;1,400&display=swap');
+
+        /* Variables de color para un tema oscuro y moderno */
+        :root {
+            --bg-color: #121212;
+            --container-bg: #1e1e1e;
+            --text-color: #e0e0e0;
+            --accent-color: #9b59b6;
+            --header-overlay: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Reseteo básico y configuración del cuerpo */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            overflow-x: hidden;
+        }
+
+        /* Cabecera con la imagen de portada */
+        #portada-header {
+            height: 70vh;
+            background-image: linear-gradient(var(--header-overlay), var(--header-overlay)), url('portada.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+            border-bottom: 3px solid var(--accent-color);
+        }
+
+        /* Contenedor principal del relato */
+        main {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0 2rem;
+        }
+
+        .relato-container {
+            max-width: 80ch;
+            width: 100%;
+            background: var(--container-bg);
+            padding: 3rem 4rem;
+            border-radius: 8px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            margin-top: -15vh;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Título principal del relato */
+        .relato-titulo {
+            font-family: 'Lato', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-align: center;
+            color: #ffffff;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            margin-bottom: 3rem;
+            line-height: 1.1;
+        }
+
+        /* Títulos de las partes (H2) */
+        .relato-container h2 {
+            font-family: 'Lato', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            line-height: 1.3;
+            text-align: center;
+            text-transform: uppercase;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        /* Párrafos del relato */
+        .relato-container p {
+            margin-bottom: 1.6rem;
+            text-align: justify;
+            hyphens: auto;
+        }
+
+        /* Bloque final con autor */
+        .fin-bloque {
+            text-align: center;
+            margin-top: 4rem;
+            font-family: 'Lato', sans-serif;
+            font-style: italic;
+            color: #aaa;
+        }
+
+        .fin-bloque p {
+            text-align: center;
+            margin-bottom: 0.25rem;
+            hyphens: none;
+        }
+
+        .fin-bloque a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-style: normal;
+        }
+
+        .fin-bloque a:hover {
+            text-decoration: underline;
+        }
+
+        /* Estilos específicos para el "FIN" con efecto "vivo" */
+        .fin-texto {
+            font-family: 'Lato', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            display: inline-block;
+            position: relative;
+            margin-bottom: 1rem;
+        }
+
+        /* Estilo para cada letra individual del texto "FIN" */
+        .fin-texto span {
+            display: inline-block;
+            transition: transform 0.1s ease-out, color 0.3s ease-in-out;
+        }
+        .fin-texto span.hovered {
+            animation: bounce 0.5s infinite alternate;
+        }
+        
+        @keyframes bounce {
+            from { transform: translateY(0); }
+            to { transform: translateY(-5px); }
+        }
+
+
+        /* Sección del botón de descarga */
+        .descarga-section {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 1px solid #444;
+        }
+
+        /* Estilo del botón de descarga */
+        .btn-descarga {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff;
+            padding: 1rem 2.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-family: 'Lato', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn-descarga:hover {
+            background-color: #8e44ad;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+
+        /* --- NUEVOS ESTILOS PARA APARICIÓN PROGRESIVA --- */
+        .hidden-on-load {
+            opacity: 0;
+            transform: translateY(30px); /* Ligeramente deslizado hacia abajo */
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+            will-change: opacity, transform; /* Optimización para el navegador */
+        }
+
+        .is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* ------------------------------------------------ */
+
+
+        /* Ajustes para pantallas más pequeñas (móviles) */
+        @media (max-width: 768px) {
+            body {
+                font-size: 1rem;
+            }
+            #portada-header {
+                height: 50vh;
+            }
+            main {
+                padding: 0 1rem;
+            }
+            .relato-container {
+                padding: 2rem 1.5rem;
+                margin-top: -10vh;
+            }
+            .relato-titulo {
+                font-size: 2.5rem;
+            }
+            .relato-container h2 {
+                font-size: 1.8rem;
+            }
+            .fin-texto {
+                font-size: 1.5rem;
+            }
+            .btn-descarga {
+                padding: 0.8rem 1.5rem;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="portada-header">
+        </header>
+
+    <main>
+        <article class="relato-container">
+
+            <h1 class="relato-titulo hidden-on-load">
+                TORMENTA<br>SOLAR
+            </h1>
+
+            <section id="primera-parte">
+                <h2 class="hidden-on-load">
+                    Primera Parte<br>Gabriel
+                </h2>
+                <p class="hidden-on-load">El alba despunta bañando de penumbra la negra oscuridad. Gabriel Salas se retuerce en la cama entreabriendo los ojos: se cerciora de que está amaneciendo. Decide recrearse un rato y cierra los ojos de nuevo, pero no se duerme. Repasa mentalmente la agenda del día: desayuno en el bar de Amaia, pasar a ver a los niños, la Casa... Hace días que descuida la Casa. Piensa ahora Gabriel que, los Salas, nunca destacaron en materia de limpieza y orden, más pronto lo contrario. La pereza y dejadez siempre pudieron más que la comodidad y el bienestar del hogar limpio, ordenado, inmaculado. Cuánto añora Gabriel a Marcela ahora, siempre Marcela, la pulcra y siempre dispuesta Marcela. Con ella en casa era fácil, porque Marcela lo organizaba todo y Gabriel se limitaba a hacer lo que ella le encomendaba. Cuánto añora la mano femenina de Marcela en la Casa, y a Marcela misma, a quien todas las mañanas, aunque sea fugazmente, Gabriel recuerda reconstruyendo episodios pasados, episodios felices junto a ella y los niños.</p>
+                <p class="hidden-on-load">En ocasiones llora: siente un vacío que le invade, le acongoja. Un vacío que va más allá de Marcela, más allá de lo comprensible; presente dondequiera que vaya, dondequiera que se encuentre. Este vacío,  —que se extiende por todas partes como una plaga implacable, como el agua de lluvia lo hace sobre la tierra y los océanos — Gabriel lo abofetea con sus recuerdos, arremete contra él soñando despierto. Intenta llenar su vacío manteniéndose ocupado, sumergiéndose en una insalvable rutina que no le agrada del todo, pero le alivia, logra así mantenerse cuerdo. En el fondo lo sabe, sabe que se sustenta gracias a un constante esfuerzo titánico, pero rehúsa pensar en ello. Cualquier pensamiento que a ese propósito brote, lo reemplaza sistemáticamente por un agradable recuerdo, siendo este proceso en sí mismo, este esfuerzo titánico por mantener la cordura, lo que desgasta a Gabriel arrastrándolo a la locura en un ciclo de lucha infinito entre imaginación y realidad, en un débil equilibrio entre los recuerdos y el presente, en un querer vivir el pasado dentro de lo que hoy vive. La vida basada en lo vivido exige un reiterado repaso a la existencia: es la doctrina del no-estar: del estar donde antes estuve, es la necesidad del no-ser: del ser lo que antes fui, es… la vida de Gabriel Salas.</p>
+                <p class="hidden-on-load">Otro corte de agua, últimamente son muy frecuentes  —piensa Gabriel cerrando de nuevo el grifo—. Por eso tiene un barreño con agua limpia preparado al lado del lavabo. Se asea. Tampoco hay luz, otra tormenta solar deduce. Se viste con calma, sin prisas. Repasa de nuevo la agenda del día mentalmente mientras busca entre el desorden un jersey más recio: últimamente ha refrescado por las mañanas aunque no tanto como para abrigarse con el anorak. Sale a la calle. Se detiene extrañado. Presta atención a la calma que le envuelve, pero el caprichoso piar de un gorrión seguido del murmullo de un grupo de gaviotas desvanece ese pensamiento. Gabriel camina ahora cuesta abajo, hacia Pesquera, el pueblo. El Mediterráneo se muestra majestuoso ante su vista, dibujando un triángulo invertido con la base en el horizonte y el vértice en la costa levantina, flanqueado por los acantilados que dan cobijo al pueblo y forman la cala de Pesquera. Gabriel desciende y el mar se allana, se convierte en una banda horizontal cada vez más estrecha hasta desaparecer tras las casas del pueblo, quedando sólo por encima del escalado horizonte que forman las azoteas: el cielo gris, el grueso manto de nubes que ha dado lugar a que estos últimos días refresque. Gabriel se adentra en el pueblo. Pasa despacio frente al quiosco sin detenerse. Gira la cabeza como un militar desfilando por delante de la tribuna y lee al vuelo en un ejemplar: TORMENTA SOLAR. Se confirman sus sospechas: otra tormenta solar ha causado el apagón. Estas tormentas acabarán por traer consecuencias realmente graves, piensa a escasos metros de La Llotja, el bar de Amaia, donde finalmente entra.</p>
+                <p class="hidden-on-load">—Buenos días Amaia.</p>
+                <p class="hidden-on-load">—Buenos días don Gabriel.</p>
+                <p class="hidden-on-load">—¡Vaya! Veo que tampoco hay luz en el pueblo.</p>
+                <p class="hidden-on-load">—Por lo visto otra tormenta solar nos ha dejado sin luz.</p>
+                <p class="hidden-on-load">—Eso parece —constata Gabriel.</p>
+                <p class="hidden-on-load">Amaia entra en la cocina y anda trasteando en ella.</p>
+                <p class="hidden-on-load">—Y para acabarlo de rematar tampoco hay agua.</p>
+                <p class="hidden-on-load">—Tomaré un zumo entonces —ha dicho Gabriel ante la imposibilidad de tomar un café exprés.</p>
+                <p class="hidden-on-load">—Deje que sirva estos huevos al señor Morrison y enseguida le atiendo. Ya sabe que no soporta los huevos pasados.</p>
+                <p class="hidden-on-load">—No te molestes Amaia, te veo atareada ya me ocupo yo.</p>
+                <p class="hidden-on-load">—Como quiera, pero es un momento, espere hombre si ya estoy.</p>
+                <p class="hidden-on-load">Gabriel insiste y se sirve él mismo. Toma asiento junto a la chimenea. No hace frío aún para encenderla, pero Amaia ya hace días que tiene unos leños colocados para prenderles fuego por si el tiempo arrecia.</p>
+                <p class="hidden-on-load">—Amaia, ¿te importa si enciendo la chimenea?</p>
+                <p class="hidden-on-load">—Adelante don Gabriel, enciéndala si le apetece. Las cerillas están sobre la cornisa.</p>
+                <p class="hidden-on-load">Gabriel no tiene frío, en realidad sólo se siente solo, y piensa en la compañía que da la lumbre más que en el embriagador abrigo que también da. Rasga una cerilla y espera a que el fósforo se consuma, después, sosegadamente prende el papel y las ramas secas. En poco tiempo el fuego crepita y chispea ensimismando a un Gabriel que vuelve a evocar el pasado. Pero esta vez Amaia se ha sentado junto a él, y Gabriel no ha logrado esquivar del pensamiento un recuerdo amargo. No ha podido porque está agotado, abatido, está rozando la locura. Se siente enormemente culpable y está además repleto de ello. Ahora Amaia hace las veces de sumidero. Gabriel canaliza su exceso de vacío: le dice:</p>
+                <p class="hidden-on-load">—¿Te he contado alguna vez por qué estoy solo? —Amaia no responde. Gabriel sabe que no lo hará. Prosigue: —Te lo contaré, te contaré por qué Marcela me abandonó…</p>
+            </section>
+
+            <section id="segunda-parte">
+                <h2 class="hidden-on-load">
+                    Segunda Parte<br>El Accidente
+                </h2>
+                <p class="hidden-on-load">Lo que ahora le cuenta a Amaia Gabriel se lo ha contado ya un porrón de veces (en las múltiples versiones y variantes que la memoria selectivamente reconstruye). Ocurrió hace ya tiempo. Gabriel no recuerda cuánto. Por aquel entonces vivían él, Marcela y los niños en Valencia, en un lujoso ático que disponía incluso de una pequeña piscina. Doctorado en Ingeniería Industrial, Gabriel se especializó en calor y frío, y más concretamente en grupos de frío. Destacó por su brillantez y no tardó en formar parte de un equipo de investigación que acabó liderando. Los logros se sucedían discretamente hasta que finalmente ocurrió, tenía que ocurrir: la genialidad de Gabriel Salas brotó de entre los ramales del conocimiento, forjándose grotescamente en la raíz para luego ir cobrando forma en su ascenso por las ramas del saber, del comprender, de la experiencia; del saber manejar y trabajar, del persistir, de la constancia; del afán por lograrlo, por llegar. Todo ello aliñado con un instante de genialidad dio lugar a un principio, y en ese instante, Gabriel Salas gritó sin gritar: eureka, y entonces todo cambió, porque tenía el Principio, y los militares financiaron su principio, y a ese proyecto lo bautizó: GLACIACIÓN.</p>
+                <p class="hidden-on-load">Todo cambió. Fue entonces cuando se mudaron al amplio y lujoso ático en Nou Campanar, y se compraron también la tranquila y apartada casa de Pesquera. Fue entonces, cuando la vida les sonreía, que una noche  —como las ecuaciones que Gabriel desarrollaba desmenuzándolas metódicamente sobre el papel— todo se complicó: el receptor de Gabriel sonó entremezclándose en su sueño, cobrando vida entre los extraños sucesos y abstractos escenarios de imágenes difusas que son los sueños. Despertó sobresaltado. Silenció el receptor mientras Marcela se revolvía dándole la espalda. La pantalla iluminada de un verde eléctrico anunciaba en cinco grandes letras pulsantes: FALLO. ¿Cómo puede fallar a las tres de la madrugada por Dios?, se preguntó Gabriel fastidiado tras consultar el reloj. Enfundó una pierna en el pantalón resignado, luego otra. Acabó de vestirse y besó a Marcela, quien apenas logró articular un: no tardes.</p>
+                <p class="hidden-on-load">Cuando Gabriel llegó a las instalaciones, ubicadas en lo alto de unos acantilados a las afueras de Valencia, Guillermo Saporta aguardaba en la puerta exterior de la cámara principal. No se inmutó, con la mirada al frente permanecía inmóvil, parecía estar en trance. Pestañeó amagando la mirada tras el brazo cuando el Audi de Gabriel lo deslumbró, sólo entonces reparó en que ya había llegado. El mar estaba agitado, el aire era de pronto más cálido, más denso. Guillermo señaló al este, hacia levante. Gabriel observó un amanecer fucsia-púrpura subido. Consultó su reloj: 3:26.</p>
+                <p class="hidden-on-load">—Olvida la postal Guillermo, hay un fallo en el generador principal.</p>
+                <p class="hidden-on-load">—Pero es que sólo son las tres y media, no es posible que esté amaneciendo. Además, ¿has visto qué color?</p>
+                <p class="hidden-on-load">—No tengo tiempo para fenómenos meteorológicos, no cuando mi bebé tiene problemas.</p>
+                <p class="hidden-on-load">Tras un rápido diagnóstico, Gabriel y Guillermo se enfundaron unos trajes especiales aislándose del mundo exterior. Se miraron a través del cristal de sus cascos asintiendo. Conectaron el traje accionando el pulsador situado en el antebrazo izquierdo, y se adentraron en la cámara principal como dos astronautas que salen a dar su paseo, un paseo que se antojaba a menos de ciento cincuenta grados centígrados bajo cero. Guillermo se detuvo a cerrar la pesada puerta que aislaba la cámara. Quiso advertir a Gabriel, pero el crepúsculo lo dejó sin habla: de un blanco intenso en el horizonte, se elevaba desplegando un elegante abanico en tonos fucsia, un degradado púrpura que cobraba más intensidad a cada instante cegando la vista de un Guillermo que contemplaba el espectáculo hipnotizado. Entonces el suelo empezó a temblar. El sismo despertó a Guillermo que accionó la palanca que cerraba la puerta en un acto reflejo, lentamente empezó a cerrarse. Gabriel observaba la escena atónito: una luz fucsia lo iluminaba todo eclipsando por completo el azul de los fluorescentes. El suelo temblaba como si una enorme locomotora se aproximase a gran velocidad y fuese a arrollarlos. La puerta fue cerrándose hasta sellar por completo la cámara. Gabriel y Guillermo se agacharon uno frente a otro, asustados… ¿qué se acercaba? Los fluorescentes estallaron en miles de fragmentos dejándolos totalmente a oscuras, los generadores de frío explotaron como una traca, uno seguido del siguiente. El suelo más que sacudir rebotaba. Gabriel notó como algo tremendamente potente los barrió, notó cómo se acercó con descaro, pasó barriéndolo todo, y se alejó impasible, mordaz.</p>
+                <p class="hidden-on-load">—…Perdí el empleo. Las cosas empezaron a ir mal. No tenía otra opción Amaia, tuve que vender el ático de Valencia. Debíamos acostumbrarnos a una vida más humilde, volver a los orígenes, ¿comprendes? Marcela no lo logró. Hizo sus cálculos, eso hizo. Me coaccionó para que firmase el divorcio valiéndose de los niños. Me abandonó.</p>
+            </section>
+
+            <section id="tercera-parte">
+                <h2 class="hidden-on-load">
+                    Tercera Parte<br>Guillermo
+                </h2>
+                <p class="hidden-on-load">Guillermo Saporta observa desde la calle embozado en un portal. Otra vez explicando esa maldita historia a Amaia, piensa con desgana. Siente rechazo. Siente caer en la trampa de nuevo, como si flotase atrapado en un remolino temporal que insalvablemente le conduce hacia el desagüe que es Pesquera, hacia Gabriel. Esta vez no ha estado fuera tanto tiempo, sólo medio año: los inviernos son duros y Guillermo ya no está dispuesto a pasarlos fuera. Por eso ha regresado, para hibernar junto a Gabriel.</p>
+                <p class="hidden-on-load">Siempre le cuesta al principio, no sabe cómo ir a encontrarlo. Guillermo no se decide y ahora ya es tarde: Gabriel abandona el bar de Amaia despidiéndose con ademán cansado. Guillermo oculta el torso y lo sigue con la mirada: se dirige a la escuela, resuelve. Deslizando la espalda por la pared se deja caer encogiéndose en un ovillo. Se lleva las manos a la cara en un gesto de desesperación. Lo mejor será esperarlo en la terraza de la rambleta, eso haré, decide finalmente. Sospecha que Gabriel esperará a que los pesqueros regresen de faenar allí, a mediodía. No sabe cómo matar el tiempo hasta entonces porque le da igual qué hacer. La indeferencia le lleva a caminar hasta la playa. Toma asiento en un banco de piedra en la pequeña rambla de Pesquera, mirando al mar, con la palma de ambas manos sobre el banco y los hombros encogidos por los brazos estirados. Está tranquilo el pueblo —piensa Guillermo—, como siempre.</p>
+                <p class="hidden-on-load">Gabriel ha visto a Guillermo al doblar la esquina. No ha sentido nada excepcional, sólo un punto de sorpresa que le incomoda. Camina hacia Guillermo reticente: siempre le cuesta al principio, no encaja en su mundo de pronto, allí sentado. Guillermo oye pasos a su espalda. Antes de que Gabriel llegue dice sin moverse:</p>
+                <p class="hidden-on-load">—Hola Gabriel.</p>
+                <p class="hidden-on-load">Gabriel no ha dicho nada. Se ha sentado junto a Guillermo y se han quedado los dos mirando cómo las olas rompen una y otra vez contra la playa. Al rato Gabriel pregunta:</p>
+                <p class="hidden-on-load">—¿Cómo ha ido por ahí?</p>
+                <p class="hidden-on-load">Guillermo responde a destiempo, con la mirada perdida:</p>
+                <p class="hidden-on-load">—Nada.</p>
+                <p class="hidden-on-load">—¿Qué quieres decir con… nada?</p>
+                <p class="hidden-on-load">—Gabriel, sabes de sobras qué quiero decir con nada —le reprocha Guillermo mirándolo por primera vez a la cara.</p>
+                <p class="hidden-on-load">—¡Claro, olvido que tú ya lo tienes todo!</p>
+                <p class="hidden-on-load">—¡Ojala!</p>
+                <p class="hidden-on-load">—Marcela claro. Siempre Marcela. No la tienes porque no la quieres tener, porque bien que tienes a Amaia, ¿verdad? Y antes has pasado por la escuela, ¿no es así? No me digas que los niños ya habían entrado del recreo y no los has podido ver, ¿es así Gabriel? Cuánto lo lamento. Y dime ¿te ha servido hoy Amaia tu café exprés? No claro, otra tormenta solar ha dejado sin luz y sin agua al pueblo. Y tampoco te ha podido servir el zumo que has pedido, ¿verdad?, esos asquerosos zumos de algas que tú mismo repones todas las tardes porque Amaia no existe. Amaia, tiene gracia, un día más te ha enviado a comprar pescado fresco a los pesqueros, aunque sabes que no vendrán. Sin embargo, milagrosamente traerán el pescado que llevas en esa bolsa y que ayer tú mismo pescaste porque no hay otra cosa que comer, porque aquella fatídica noche murió todo lo demás. Estamos solos Gabriel maldita sea, solos en este yermo mundo de peces. Sabes que me refería a eso, tampoco esta vez he encontrado ningún superviviente.</p>
+                <p class="hidden-on-load">—Estás loco Guillermo, completamente loco.</p>
+                <p class="hidden-on-load">Gabriel se ha levantado dirigiéndose hacia unas embarcaciones atracadas en la arena. Está metido en un corrillo de mujeres que pujan por una caja de merluzas. Guillermo observa a un Gabriel que de pronto bromea y hace burla, él solo, en la desolada playa de la desolada aldea del desolado planeta, negociando con fantasmas. Nunca debí dejarlo solo tanto tiempo  —se dice— ahora ya es tarde. Al final  —piensa Guillermo— acabará por arrastrarme dentro de su propia paranoia, o lo que es peor: acabará por hacerme creer que el que está loco soy yo.</p>
+            </section>
+
+            <div class="fin-bloque hidden-on-load">
+                <p class="fin-texto" id="finText">FIN</p>
+                <p>Pere Chardi Garcia</p>
+                <p><a href="mailto:pere.chardi@gmail.com">pere.chardi@gmail.com</a></p>
+            </div>
+
+            <section class="descarga-section hidden-on-load">
+                <a href="tormentaSolar.pdf" download class="btn-descarga">
+                    Descargar PDF
+                </a>
+            </section>
+
+        </article>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // --- SCRIPT PARA EFECTO "VIVO" EN 'FIN' (al pasar el ratón) ---
+            const finTextElement = document.getElementById('finText');
+            if (finTextElement) { // Comprobar si el elemento existe
+                const text = finTextElement.textContent;
+                finTextElement.innerHTML = ''; // Limpiar el contenido original
+
+                // Crear un span para cada letra
+                text.split('').forEach(char => {
+                    const span = document.createElement('span');
+                    span.textContent = char;
+                    finTextElement.appendChild(span);
+                });
+
+                const spans = finTextElement.querySelectorAll('span');
+                let animationInterval;
+
+                // Función para animar una letra
+                function animateLetter(span) {
+                    const randomX = (Math.random() - 0.5) * 10;
+                    const randomY = (Math.random() - 0.5) * 10;
+                    const randomRotate = (Math.random() - 0.5) * 10;
+                    span.style.transform = `translate(${randomX}px, ${randomY}px) rotate(${randomRotate}deg)`;
+                    span.style.color = `hsl(${Math.random() * 360}, 100%, 70%)`;
+                }
+
+                // Función para resetear una letra
+                function resetLetter(span) {
+                    span.style.transform = 'translate(0, 0) rotate(0deg)';
+                    span.style.color = 'var(--accent-color)';
+                }
+
+                // Iniciar el efecto al pasar el ratón (hover)
+                finTextElement.addEventListener('mouseenter', () => {
+                    spans.forEach(span => {
+                        span.classList.add('hovered');
+                    });
+                    animationInterval = setInterval(() => {
+                        spans.forEach(span => {
+                            animateLetter(span);
+                        });
+                    }, 100);
+                });
+
+                // Detener el efecto al quitar el ratón
+                finTextElement.addEventListener('mouseleave', () => {
+                    clearInterval(animationInterval);
+                    spans.forEach(span => {
+                        span.classList.remove('hovered');
+                        resetLetter(span);
+                    });
+                });
+            }
+
+            // --- NUEVO SCRIPT PARA APARICIÓN PROGRESIVA (al hacer scroll) ---
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Añadir un pequeño retraso a cada elemento para un efecto escalonado
+                        const delay = (entry.target.dataset.delay || 0) + 'ms';
+                        entry.target.style.transitionDelay = delay;
+                        
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target); // Dejar de observar una vez que es visible
+                    }
+                });
+            }, {
+                rootMargin: '0px',
+                threshold: 0.1 // Aparecer cuando al menos el 10% del elemento esté visible
+            });
+
+            // Seleccionar todos los elementos que queremos animar
+            const elementsToAnimate = document.querySelectorAll('.hidden-on-load');
+            
+            // Asignar un retraso escalonado a cada elemento
+            elementsToAnimate.forEach((el, index) => {
+                // Hacemos que el retraso sea más rápido para párrafos sucesivos
+                el.dataset.delay = (index % 10) * 50; // 0ms, 50ms, 100ms... se resetea cada 10 párrafos
+                observer.observe(el);
+            });
+        });
+    </script>
+
+</body>
+</html>
